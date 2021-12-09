@@ -14,7 +14,7 @@ pipeline {
   stages {
       stage('Python runner testing') {
           steps {
-              sh 'python -V'
+              sh 'python app.py'
           }
       }
 
