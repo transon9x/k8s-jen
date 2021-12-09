@@ -19,15 +19,10 @@ pipeline {
       }
       stage('Python install lib') {
           steps {
-              sh 'pip install -r requirements.txt'
+              sh 'pip3 install -r requirements.txt'
           }
       }
-      stage('Python runner testing') {
-          steps {
-              sh 'python app.py'
-          }
-    } 
-
+      
       stage('Build and push Docker Im') {
           steps {
             container('docker') {  
