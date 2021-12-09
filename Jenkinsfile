@@ -19,11 +19,7 @@ pipeline {
               sh 'python -V'
           }
       }
-      stage('ssh to node1') {
-          steps {
-              sh 'ssh root@192.168.18.131'
-          }
-      }
+
       stage('Python install lib') {
           steps {
               sh 'pip3 install -r requirements.txt'
