@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: python-simple-app
   labels:
-    app: python-simple-app
 spec:
   replicas: 3
   selector:
@@ -16,6 +15,6 @@ spec:
     spec:
       containers:
       - name: python-simple-app
-        image: trongthongvo/python-simple-app:latest
+        image: sontran9xz/python-simple-app:latest
         ports:
         - containerPort: 8000
