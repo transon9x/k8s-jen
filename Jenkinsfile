@@ -14,12 +14,17 @@ pipeline {
   stages {
       stage('Python runner env') {
           steps {
-              sh 'python app.py'
+              sh 'python -v'
           }
       }
       stage('Python install lib') {
           steps {
               sh 'pip3 install -r requirements.txt'
+          }
+      }
+      stage('Python run app.py') {
+          steps {
+              sh 'python app.py'
           }
       }
       
