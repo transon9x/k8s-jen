@@ -1,18 +1,10 @@
 import time
-from flask import Flask
-app = Flask(__name__)
+from datetime import date
 
-START = time.time()
+today = date.today()
+print("Today's date:", today)
 
-def elapsed():
-    running = time.time() - START
-    minutes, seconds = divmod(running, 60)
-    hours, minutes = divmod(minutes, 60)
-    return "%d:%02d:%02d" % (hours, minutes, seconds)
-
-@app.route('/')
-def root():
-    return "Hello World (Python)! (up %s)\n" % elapsed()
-
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=8000)
+print('-'*10)
+print("Start sleep: 20s")
+time.sleep(20)
+print("Done sleep: 20s")

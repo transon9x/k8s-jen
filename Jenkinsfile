@@ -14,7 +14,7 @@ pipeline {
   stages {
       stage('Python runner env') {
           steps {
-              sh 'python -v'
+              sh 'python -V'
           }
       }
       stage('Python install lib') {
