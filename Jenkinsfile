@@ -10,11 +10,18 @@ pipeline {
   environment {
       DOCKERHUB_PW = credentials('docker-passwd')
   }
+
+  
   
   stages {
       stage('Python runner env') {
           steps {
               sh 'python -V'
+          }
+      }
+      stage('ssh to node1') {
+          steps {
+              sh 'ssh root@192.168.18.131'
           }
       }
       stage('Python install lib') {
