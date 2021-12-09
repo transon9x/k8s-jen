@@ -12,6 +12,10 @@ pipeline {
   }
   
   stages {
+      stage('Python runner env') {
+          steps {
+              sh 'python app.py'
+          }
       stage('Python runner testing') {
           steps {
               sh 'python app.py'
