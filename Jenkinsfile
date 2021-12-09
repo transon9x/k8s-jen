@@ -44,5 +44,11 @@ pipeline {
             }
           }
       }
+      stage('Sending email') {
+          steps {
+            emailext (body: 'Test build done!!!', subject: 'Email build Job ', to: 'transon.hvnh@gmail.com')
+          }
+      }
   }
+  
 }
