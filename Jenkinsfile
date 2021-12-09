@@ -16,6 +16,7 @@ pipeline {
           steps {
               sh 'python app.py'
           }
+      }
       stage('Python install lib') {
           steps {
               sh 'pip install -r requirements.txt'
@@ -25,7 +26,6 @@ pipeline {
           steps {
               sh 'python app.py'
           }
-      }
     } 
 
       stage('Build and push Docker Im') {
